@@ -1,5 +1,5 @@
 :root {
-  --primary: #6c63ff;
+  --primary: #036e29;
   --bg: #0f0f1a;
   --card: rgba(255,255,255,0.1);
   --text: #ffffff;
@@ -13,7 +13,7 @@
 }
 
 body {
-  background: linear-gradient(135deg, #0f0f1a, #1a1a2e);
+  background: linear-gradient(135deg, #012a11, #0e1f56);
   color: var(--text);
   line-height: 1.6;
 }
@@ -77,7 +77,7 @@ section {
 }
 
 .about {
-  background: #0f172a;
+  background: #0f2a10;
   padding: 40px 20px;
 }
 
