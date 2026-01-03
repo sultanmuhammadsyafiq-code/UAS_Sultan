@@ -92,9 +92,9 @@ section {
 
 /* Gambar diperkecil */
 .about-img {
-  width: 150px;
-  height: auto;
-  border-radius: 10px;
+  width: 170px;
+  height: 100;
+  border-radius: 30px;
   object-fit: cover;
 }
 
