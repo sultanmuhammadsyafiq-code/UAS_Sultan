@@ -1,11 +1,151 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Modern Portfolio</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <p>Saya Sultan</p>
+
+<header>
+  <h1>MyPortfolio</h1>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#profile">Profile</a>
+    <a href="#karya">Karya</a>
+    <a href="#media">Media</a>
+    <a href="#kontak">Kontak</a>
+  </nav>
+</header>
+
+<!-- HOME -->
+<section id="home" class="home">
+  <img src="profile.jpeg" alt="Foto Profil">
+  <h2>Halo, Saya <span>Sultan Muhammad Syafiq</span></h2>
+  <p>Web Developer & UI/UX Designer</p>
+  <a href="#karya" class="btn">Lihat Karya</a>
+</section>
+
+<!-- PROFILE -->
+<section id="profile" class="profile">
+  <div class="about-container">
+
+    <!-- GAMBAR -->
+    <img src="profile.jpeg" alt="Foto Profil" class="about-img">
+
+    <!-- TEKS -->
+    <div class="about-text">
+      <p>
+        Saya adalah Mahasiswa Universitas Pamulang dengan Jurusan Sistem Informasi
+        yang memiliki hobi di bidang teknologi, khususnya dalam pengembangan web
+        dan desain UI/UX. Karena background saya sebelumnya di bidang multimedia,
+        saya memiliki keahlian dalam menggabungkan aspek visual.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<!-- KARYA -->
+<section id="karya">
+  <h2>Karya Saya</h2>
+  <div class="grid karya-grid">
+
+    <div class="karya-card">
+      <img src="project1.jpeg">
+      <h4>Website Portofolio</h4>
+      <p>Website portofolio modern dan responsive menggunakan HTML, CSS, dan JavaScript.</p>
+    </div>
+
+    <div class="karya-card">
+      <img src="project2.jpeg">
+      <h4>UI Design</h4>
+      <p>Desain antarmuka aplikasi dengan konsep minimalis dan user-friendly.</p>
+    </div>
+
+    <div class="karya-card">
+      <img src="project3.jpeg">
+      <h4>Landing Page</h4>
+      <p>Landing page promosi produk dengan tampilan aesthetic dan clean.</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- MEDIA -->
+<section id="media">
+  <h2>Gallery</h2>
+  <div class="card">
+    <h3>🎥 Video</h3>
+    <video controls>
+      <source src="assets/video.mp4" type="video/mp4">
+    </video>
+
+    <h3>🎵 Audio</h3>
+    <audio controls>
+      <source src="assets/audio.mp3" type="audio/mpeg">
+    </audio>
+
+    <h3>📄 Dokumen</h3>
+    <a href="assets/file.pdf" class="btn" target="_blank">Download Dokumen</a>
+  </div>
+</section>
+
+<section id="kontak">
+  <h2>Kontak</h2>
+
+  <div class="card kontak-card">
+    <p>Silakan hubungi saya melalui:</p>
+
+    <ul>
+      <li>📧 Email: sultan@email.com</li>
+      <li>📱 WhatsApp: 08xxxxxxxxxx</li>
+      <li>🌐 Instagram: @sultan.dev</li>
+      <li>💼 GitHub: github.com/sultan</li>
+    </ul>
+
+    <form class="form-kontak">
+      <input type="text" placeholder="Nama" required>
+      <input type="email" placeholder="Email" required>
+      <textarea placeholder="Pesan"></textarea>
+      <button type="submit" class="btn">Kirim Pesan</button>
+    </form>
+  </div>
+</section>
+
+<footer>
+  © 2026 Portfolio Sultan Muhammad Syafiq
+</footer>
+
+<!-- JavaScript -->
+<script>
+  // Smooth scroll
+  document.querySelectorAll('nav a').forEach(link => {
+    link.addEventListener('click', function(e) {
+      e.preventDefault();
+      document.querySelector(this.getAttribute('href'))
+        .scrollIntoView({ behavior: 'smooth' });
+    });
+  });
+
+  // Fade animation saat scroll
+  const sections = document.querySelectorAll('section');
+  sections.forEach(sec => {
+    sec.style.opacity = 0;
+    sec.style.transform = 'translateY(40px)';
+    sec.style.transition = '0.8s';
+  });
+
+  window.addEventListener('scroll', () => {
+    sections.forEach(sec => {
+      if (sec.getBoundingClientRect().top < window.innerHeight - 100) {
+        sec.style.opacity = 1;
+        sec.style.transform = 'translateY(0)';
+      }
+    });
+  });
+</script>
+
 </body>
 </html>
