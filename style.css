@@ -81,6 +81,7 @@ section {
   padding: 40px 20px;
 }
 
+/* PROFILE */
 .about-container {
   display: flex;
   align-items: center;
@@ -91,9 +92,9 @@ section {
 
 /* Gambar diperkecil */
 .about-img {
-  width: 250px;
+  width: 150px;
   height: auto;
-  border-radius: 15px;
+  border-radius: 10px;
   object-fit: cover;
 }
 
